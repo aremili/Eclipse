@@ -1,0 +1,65 @@
+/* ===== Navigation Bar ===== */
+.nav-root {
+	background-color: var(--color-bg);
+	box-shadow: var(--shadow-sm);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 64px;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 var(--space-4);
+}
+
+/* Logo */
+.nav-logo-link {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+.nav-logo {
+	width: 32px;
+	height: 32px;
+	background-color: var(--color-primary);
+	border-radius: var(--radius-lg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+.nav-logo-text {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+/* Navigation Actions */
+.nav-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+.nav-user-email {
+	color: var(--color-text-secondary);
+	font-size: 0.875rem;
+}
+
+/* Radix Navigation Menu List */
+.NavigationMenuList {
+	display: flex;
+	gap: var(--space-4);
+	list-style: none;
+	align-items: center;
+}

@@ -1,0 +1,20 @@
+/**
+ * extracts error messages from various error types
+ * @param error - the error to extract the message from
+ * @returns the extracted error message
+ */
+export function getErrorMessage(error: unknown): string {
+	if (error instanceof Error) {
+		return error.message;
+	}
+
+	if (typeof error === "string") {
+		return error;
+	}
+
+	if (error && typeof error === "object" && "message" in error) {
+		return String(error.message);
+	}
+
+	return "An unexpected error occurred";
+}
