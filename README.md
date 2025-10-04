@@ -94,24 +94,6 @@ BETTER_AUTH_URL=
 VITE_API_URL=http://localhost:3000
 ```
 
-
-## Backend (apps/server) — remarques
-
-- Le serveur utilise Express et s'appuie sur `better-auth` pour l'authentification.
-- Les scripts Prisma présents dans `apps/server/package.json` incluent : `db:push`, `db:studio`, `db:generate`, `db:migrate`.
-- Le script `db:start` utilise `docker compose up -d` et s'appuie sur `apps/server/docker-compose.yml` qui définit un service `postgres` (image postgres:17), utile pour le dev.
-
-## Frontend (apps/frontend) — remarques
-
-- Le frontend est une application React + Vite.
-- URL d'API utilisée par défaut : `VITE_API_URL` (ex: http://localhost:3000).
-
-## Déploiement (a revoir)
-
-- Construire : `npm run build` (Turborepo déclenche les builds des packages)
-- Frontend : `apps/frontend` build produit les fichiers statiques (Vite)
-- Backend : préparer les variables d'environnement (DATABASE_URL, BETTER_AUTH_SECRET, BETTER_AUTH_URL) et déployer l'image / serveur Node
-
 ## Suggestions d'améliorations (prochaines étapes)
 
 - Documenter les étapes de migration Prisma (ex: backup, rollback)
