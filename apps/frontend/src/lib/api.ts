@@ -8,14 +8,9 @@ const api = axios.create({
 	},
 });
 
-// Add request interceptor for auth tokens (if needed)
+// Add request interceptor for auth tokens
 api.interceptors.request.use(
 	(config) => {
-		// Better Auth typically uses cookies, but if you need tokens:
-		// const token = localStorage.getItem('token');
-		// if (token) {
-		//   config.headers.Authorization = `Bearer ${token}`;
-		// }
 		return config;
 	},
 	(error) => Promise.reject(error),
