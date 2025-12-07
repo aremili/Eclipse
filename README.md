@@ -67,8 +67,30 @@ npm run dev
 - npm run check-types : vérifie les types TypeScript
 - npm run db:studio : ouvre Prisma Studio
 - npm run db:migrate : lance les migrations Prisma
+- npm run test : lance tous les tests (frontend et server) via Turborepo
 
 Consultez `package.json` à la racine et dans `apps/*/package.json` pour la liste complète des scripts.
+
+## Tests
+
+Pour lancer les tests de l'ensemble du monorepo :
+
+```bash
+npm run test
+```
+
+Pour lancer les tests d'un workspace spécifique (ex: server) :
+
+```bash
+turbo test --filter server
+```
+
+Ou directement depuis le dossier du workspace :
+
+```bash
+cd apps/server
+npm run test
+```
 
 ## Démarrer en local
 
@@ -97,7 +119,7 @@ VITE_API_URL=http://localhost:3000
 ## Suggestions d'améliorations (prochaines étapes)
 
 - Documenter les étapes de migration Prisma (ex: backup, rollback)
-- Ajouter des instructions de tests/unit/integration et un workflow CI (GitHub Actions)
+- Mettre en place un workflow CI (GitHub Actions)
 
 ## Ressources
 
